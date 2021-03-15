@@ -1,4 +1,5 @@
-const allowedOrigins = ['http://localhost:3000'];
+const { ALLOWED_ORIGINS } = process.env;
+const allowedOrigins = JSON.parse(ALLOWED_ORIGINS);
 
 const corsOptions = {
   origin: function (origin, callback) {
